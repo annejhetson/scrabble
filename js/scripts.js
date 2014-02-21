@@ -1,6 +1,7 @@
 var scrabble = function(txt) {
   var lettersValueOne = ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"];
   var lettersValueTwo = ["D", "G"];
+  var lettersValueThree = ["B", "C", "M", "P"]
   var result;
 
   var index = lettersValueOne.indexOf(txt);
@@ -8,7 +9,12 @@ var scrabble = function(txt) {
       console.log("index = " + index);
       return 1
     } else {
+      var index2 =lettersValueTwo.indexOf(txt);
+      if (index2 >= 0) {
+
+      console.log("index2 = " + index2);
       return 2
+      };
     };
 };
 
