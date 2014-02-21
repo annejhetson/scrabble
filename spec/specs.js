@@ -1,29 +1,27 @@
-describe('factorial', function() {
+describe('scrabble',function() {
+
+  it('will return 1 when input is the letter A',function() {
+    scrabble('A').should.equal(1);
+  });
+
+  it('will return 1 when input is the letter E',function() {
+  scrabble('E').should.equal(1);
+});
+
+  // it('will return true when input is the letter A'), function() {
+  //   scrabble('A').should.equal(true);
+  // }0;
+
+  // it('will return 1 for each inputs "A, E, I, O, U, L, N, R, S, T"',function() {
+  //   scrabble('E').should.equal(1);
+  // });
+
+  it('will return 1 for each inputs "a, e, i, o, u, l, n, r, s, t"',function() {
+    scrabble('e').should.equal(1);
+  });
+
+  it('will return 2 for each inputs "D, G"',function() {
+    scrabble('Gooo').should.equal(2);
+  });
+});
   
-  it('returns a 1 when you enter 0', function () {
-    factorial(0).should.equal(1);
-  });
-
-  it('returns a 1 when you enter 1', function () {
-    factorial(1).should.equal(1);
-  });
-
-  it('multiplies a number by all of the positive integers less than that number', function () {
-    factorial(5).should.equal(120);
-  });
-});
-describe('fibonacci', function() {
-  it('returns a 0 when you enter 1', function () {
-    fibonacci(1).should.equal(0);
-  });
-  it('returns a 1 when you enter 2', function () {
-    fibonacci(2).should.equal(1);
-  });
-  it('returns a 2 when you enter 3', function () {
-    fibonacci(3).should.equal(1);
-  });
-
-  it('should sum the first two numbers of the array', function () {
-    fibonacci(12).should.equal(89);
-  });  
-});
