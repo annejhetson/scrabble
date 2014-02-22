@@ -6,7 +6,8 @@ var scrabble = function(txt) {
   var lettersValueFive = ["K"];
   var lettersValueEight = ["J", "X"];
   var lettersValueTen = ["Q", "Z"];
-  var multipleLetters = txt.split("");
+  var multipleLettersUpperCase = txt.toUpperCase();
+  var multipleLetters = multipleLettersUpperCase.split("");
   var totalValue = 0;
 
 
