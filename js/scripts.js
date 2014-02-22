@@ -2,55 +2,32 @@ var scrabble = function(txt) {
   var lettersValueOne = ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"];
   var lettersValueTwo = ["D", "G"];
   var lettersValueThree = ["B", "C", "M", "P"]
-  var result;
+  var lettersValueFour = ["F", "H", "V", "W", "Y"];
+  var lettersValueFive = ["K"];
+  var lettersValueEight = ["J", "X"];
+  var lettersValueTen = ["Q", "Z"];
+  var multipleLetters = txt.split("");
+  var totalValue = 0;
 
-  var index = lettersValueOne.indexOf(txt);
-    if (index >= 0){
-      console.log("index = " + index);
-      return 1
-    } else {
-      var index2 =lettersValueTwo.indexOf(txt);
-      if (index2 >= 0) {
 
-      console.log("index2 = " + index2);
-      return 2
-      };
-    };
+  for (var i = 0; i < multipleLetters.length; i++) {
+    if (lettersValueOne.indexOf(multipleLetters[i]) > -1) {
+      totalValue += 1;
+      } else if (lettersValueTwo.indexOf(multipleLetters[i]) > -1) {
+        totalValue += 2;
+      } else if (lettersValueThree.indexOf(multipleLetters[i]) > -1) {
+        totalValue += 3; 
+      } else if (lettersValueFour.indexOf(multipleLetters[i]) > -1) {
+        totalValue += 4;
+      } else if (lettersValueFive.indexOf(multipleLetters[i]) > -1) {
+        totalValue += 5;
+      } else if (lettersValueEight.indexOf(multipleLetters[i]) > -1) {
+        totalValue += 8; 
+      } else if (lettersValueTen.indexOf(multipleLetters[i]) > -1) {
+        totalValue += 10;
+      } 
+  };
+  return totalValue;                
 };
 
 
-
-
-
-
-
-
-
-
-
-  // for (i = txt; i = letter ; i++) {
-  //   if(i )
-  // }
-
-
-
-
-
-
-
-
-
-
-  // lettersValueOne.forEach(function(letter) {
-  //   if (txt = letter) {
-  //     console.log(txt);
-  //     result = 1; 
-  //   } else {
-
-  //     result = 2;
-  //   } 
-  // })
-  // return result;
-// };
-
-// "a", "e", "I", "o", "u", "l", "n", "r", "s", "t"
