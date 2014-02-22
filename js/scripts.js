@@ -1,5 +1,5 @@
 var scrabble = function(txt) {
-  var lettersValueOne = ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"];
+  var lettersValueOne = ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T", "_"];
   var lettersValueTwo = ["D", "G"];
   var lettersValueThree = ["B", "C", "M", "P"]
   var lettersValueFour = ["F", "H", "V", "W", "Y"];
@@ -30,4 +30,15 @@ var scrabble = function(txt) {
   return totalValue;                
 };
 
-
+$(function() {
+  console.log("hello");
+  $('form#scrabble').submit(function(event) { 
+    
+    var word = $('#input-word').val();
+    var totalScore = scrabble(word);
+    
+    $('#score').text(totalScore);
+    $('#result').show();
+    event.preventDefault();
+  });
+});
