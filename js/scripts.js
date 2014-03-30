@@ -6,25 +6,25 @@ var scrabble = function(txt) {
   var lettersValueFive = ["K"];
   var lettersValueEight = ["J", "X"];
   var lettersValueTen = ["Q", "Z"];
-  var multipleLettersUpperCase = txt.toUpperCase();
-  var multipleLetters = multipleLettersUpperCase.split("");
+  var letters = txt.toUpperCase().split("");
+  
   var totalValue = 0;
 
 
-  for (var i = 0; i < multipleLetters.length; i++) {
-    if (lettersValueOne.indexOf(multipleLetters[i]) > -1) {
+  for (var i = 0; i < letters.length; i++) {
+    if (lettersValueOne.indexOf(letters[i]) > -1) {
       totalValue += 1;
-      } else if (lettersValueTwo.indexOf(multipleLetters[i]) > -1) {
+      } else if (lettersValueTwo.indexOf(letters[i]) > -1) {
         totalValue += 2;
-      } else if (lettersValueThree.indexOf(multipleLetters[i]) > -1) {
+      } else if (lettersValueThree.indexOf(letters[i]) > -1) {
         totalValue += 3; 
-      } else if (lettersValueFour.indexOf(multipleLetters[i]) > -1) {
+      } else if (lettersValueFour.indexOf(letters[i]) > -1) {
         totalValue += 4;
-      } else if (lettersValueFive.indexOf(multipleLetters[i]) > -1) {
+      } else if (lettersValueFive.indexOf(letters[i]) > -1) {
         totalValue += 5;
-      } else if (lettersValueEight.indexOf(multipleLetters[i]) > -1) {
+      } else if (lettersValueEight.indexOf(letters[i]) > -1) {
         totalValue += 8; 
-      } else if (lettersValueTen.indexOf(multipleLetters[i]) > -1) {
+      } else if (lettersValueTen.indexOf(letters[i]) > -1) {
         totalValue += 10;
       } 
   };
@@ -32,7 +32,6 @@ var scrabble = function(txt) {
 };
 
 $(function() {
-  console.log("hello");
   $('form#scrabble').submit(function(event) { 
     
     var word = $('#input-word').val();
